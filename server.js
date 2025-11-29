@@ -33,8 +33,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`🚪 Keypad server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚪 Keypad server running on port ${PORT}`);
   console.log(`🔑 Admin PIN: ${process.env.ADMIN_PIN || '123456'}`);
   console.log('📱 Open in browser to test');
 });
