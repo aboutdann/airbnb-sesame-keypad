@@ -1,0 +1,169 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  background: rgba(20, 20, 30, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.header { text-align: center; margin-bottom: 24px; }
+h1 { font-size: 28px; margin-bottom: 8px; color: #4ade80; }
+.status { 
+  min-height: 20px; 
+  font-size: 14px; 
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.display {
+  height: 72px;
+  margin: 24px 0;
+  background: rgba(0,0,0,0.8);
+  border: 2px solid rgba(74, 222, 128, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #4ade80;
+  transition: all 0.3s ease;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.keypad button {
+  height: 64px;
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  background: rgba(60,60,80,0.8);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.keypad button:active {
+  transform: scale(0.95);
+  background: rgba(74, 222, 128, 0.2);
+  border-color: #4ade80;
+}
+
+.keypad button:nth-last-child(3) { grid-column: span 2; } /* 0 spans 2 cols */
+
+.admin-panel {
+  border-top: 1px solid rgba(74, 222, 128, 0.3);
+  padding-top: 24px;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden { display: none !important; }
+
+.section { margin-bottom: 24px; }
+h2, h3 { color: #4ade80; margin-bottom: 16px; font-weight: 600; }
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(60,60,80,0.8);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.btn.primary { background: linear-gradient(135deg, #4ade80, #22c55e); }
+
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(74,222,128,0.3); }
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.form-group input, .form-group select {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(40,40,50,0.8);
+  color: #fff;
+  font-size: 16px;
+}
+
+.pins-list {
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.pin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: rgba(74,222,128,0.1);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.pin-delete {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .form-group { grid-template-columns: 1fr; }
+  .container { margin: 10px; padding: 24px 16px; }
+}

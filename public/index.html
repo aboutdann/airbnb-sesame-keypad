@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚪 Door Keypad</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="keypad.css">
+  <meta name="theme-color" content="#111111">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚪 Door Access</h1>
+      <div id="status" class="status"></div>
+    </div>
+    
+    <div class="display" id="display">Enter PIN</div>
+    
+    <div class="keypad" id="keypad"></div>
+
+    <div id="admin-panel" class="admin-panel hidden">
+      <h2>⚙️ Admin Settings</h2>
+      
+      <div class="section">
+        <button id="refresh-pins" class="btn">🔄 Refresh Pins</button>
+        <div id="pins-list" class="pins-list"></div>
+      </div>
+
+      <div class="section">
+        <h3>➕ Create New PIN</h3>
+        <div class="form-group">
+          <label>Code <input id="new-code" maxlength="8" placeholder="123456"></label>
+          <label>Type 
+            <select id="new-type">
+              <option value="temporary">⏰ Temporary</option>
+              <option value="permanent">∞ Permanent</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group">
+          <label>Starts <input id="new-start" type="datetime-local" placeholder="Optional"></label>
+          <label>Ends <input id="new-end" type="datetime-local" placeholder="Optional"></label>
+        </div>
+        <div class="form-group">
+          <label>Label <input id="new-label" placeholder="Guest name"></label>
+          <label>Phone <input id="new-phone" placeholder="+1234567890 (SMS)"></label>
+        </div>
+        <button id="create-pin" class="btn primary">✅ Create & Notify</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="keypad.js"></script>
+</body>
+</html>

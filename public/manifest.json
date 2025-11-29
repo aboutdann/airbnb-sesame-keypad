@@ -1,0 +1,16 @@
+{
+  "name": "Door Keypad",
+  "short_name": "Keypad",
+  "description": "Smart door access keypad",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#4ade80",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNjAgMTZIMzIgQzI4LjgyOCA0LjcxNDMgMTYuNjgyIDEzLjE0IDE2LjY4MiAyNEgyNi4zMThDMjYuNjgyIDMuODU3OCAzNS4xNDMgMiAxNDQuNzA2IDJIMTU1LjMxOEMxNTUuNjgyIDEzLjE0IDE0NC40NzcgMjQuNzE0IDE0NCAyNFoiIGZpbGw9IiM0QURFODAiLz4KPHBhdGggZD0iTTE2MCAxNzBDMTYwIDE3My4yOSAxNTMuMjkgMTgwIDE0NCAxODBINjhjLjk0MjMgMCAxNi0zLjcxNDIgMTYtMTRWMTRIUzEwNCAxNCAxMDQgMTRWMTEySDkyVjE0QzkyIDE3My4yOSAxMDAuNzEgMTgwIDEwOCAxODBaIiBmaWxsPSIjNEYyRjVGIi8+Cjwvc3ZnPgo=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
